@@ -5,7 +5,8 @@ class PostImage < ApplicationRecord
    has_many :favorites, dependent: :destroy
    #belongs_to :userで紐つけてる
    #PostImageモデルに関連付けられるのは一個のユーザーモデルなので、単数系のuser
-
+   validates :shop_name, presence: true
+   validates :image, presence: true
   #def get_image
       #if image.attached?
         #image
